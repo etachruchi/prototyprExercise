@@ -1,0 +1,56 @@
+ .mySidenav {
+     width: 20%;
+     margin-top: 5px;
+     margin-left: 5px;
+ }
+ 
+ .list-group>li>a {
+     padding-left: 20px;
+     padding-bottom: 5px;
+     padding-right: 5px;
+     padding-top: 5px;
+     font-size: 12px;
+     font-family: Arial, Helvetica, sans-serif;
+     cursor: pointer;
+     color: black;
+ }
+ 
+ .list-group>li>a :hover,
+ {
+     border-color: #2aafcd;
+     background-color: #E7EBFF;
+     font-style: bold;
+ }
+ /*  
+ a:hover {
+     border-color: #2aafcd;
+     background-color: #E7EBFF;
+     font-style: bold;
+ } */
+ 
+ nav ul a.active {
+     color: #039be5;
+     border-left: 5px solid blue;
+ }
+ 
+ .list-group-item:hover {
+     background-color: #E7EBFF;
+     border-color: #2aafcd;
+     font-weight: 600;
+ }
+ 
+ .list-group-item {
+     margin-bottom: 0;
+ }
+ 
+ .list-group-item a {
+     text-decoration: none;
+ }
+ 
+ @media (max-width: 600px) {
+     .mySidenav {
+         width: 50%;
+         margin-top: 5px;
+         margin-left: 5px;
+     }
+ }
