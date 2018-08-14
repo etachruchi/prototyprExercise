@@ -21,17 +21,6 @@
      background-color: #E7EBFF;
      font-style: bold;
  }
- /*  
- a:hover {
-     border-color: #2aafcd;
-     background-color: #E7EBFF;
-     font-style: bold;
- } */
- 
- nav ul a.active {
-     color: #039be5;
-     border-left: 5px solid blue;
- }
  
  .list-group-item:hover {
      background-color: #E7EBFF;
