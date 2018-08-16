@@ -62,15 +62,7 @@ export class DataAnalysisComponent implements OnInit, OnDestroy {
         renderTo: this.chartEl.nativeElement
       }
     };
-
-    if (this.chartEl && this.chartEl.nativeElement) {
-      opts.chart = {
-        type: "line",
-        renderTo: this.chartEl.nativeElement
-      };
-
-      this.chart = new Highcharts.Chart(opts);
-    }
+    this.chart = new Highcharts.Chart(opts);
   }
 
   public ngOnDestroy() {
