@@ -33,11 +33,10 @@
  .list-group-item a {
      text-decoration: none;
  }
- 
- @media (max-width: 600px) {
+ /* @media (max-width: 600px) {
      .mySidenav {
          width: 50%;
          margin-top: 5px;
          margin-left: 5px;
      }
- }
+ } */
