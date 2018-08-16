@@ -1,7 +1,7 @@
 import { Component, ElementRef, AfterViewInit, OnDestroy, ViewChild, OnInit} from '@angular/core';
 import { BrowserModule } from "@angular/platform-browser";
 import { ChartModule } from "angular2-highcharts";
-
+declare let Highcharts :any;
 import "highcharts/adapters/standalone-framework.src";
 @Component({
   selector: 'app-data-analysis',
@@ -9,7 +9,6 @@ import "highcharts/adapters/standalone-framework.src";
   styleUrls: ['./data-analysis.component.css']
 })
 export class DataAnalysisComponent implements OnInit, OnDestroy  {
-  // const Highcharts = require("highcharts/highcharts.src");
   constructor() { }
 
   ngOnInit() {
@@ -41,20 +40,6 @@ export class DataAnalysisComponent implements OnInit, OnDestroy  {
         layout: 'vertical',
         align: 'right',
         verticalAlign: 'middle'
-      },
-      responsive: {
-        rules: [{
-          condition: {
-            maxWidth: 500
-          },
-          chartOptions: {
-            legend: {
-              layout: 'horizontal',
-              align: 'center',
-              verticalAlign: 'bottom'
-            }
-          }
-        }]
       },
       series: [{
         name: 'Male',
