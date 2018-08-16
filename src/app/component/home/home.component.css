@@ -1,7 +1,6 @@
  .mySidenav {
      width: 20%;
      margin-top: 5px;
-     margin-left: 5px;
  }
  
  .list-group>li>a {
@@ -9,13 +8,6 @@
      font-family: Arial, Helvetica, sans-serif;
      cursor: pointer;
      color: black;
- }
- 
- .list-group>li>a :hover,
- {
-     border-color: #2aafcd;
-     background-color: #E7EBFF;
-     font-style: bold;
  }
  
  .list-group-item:hover {
@@ -32,11 +24,9 @@
  
  .list-group-item a {
      text-decoration: none;
+     color: black;
  }
- /* @media (max-width: 600px) {
-     .mySidenav {
-         width: 50%;
-         margin-top: 5px;
-         margin-left: 5px;
-     }
- } */
+ 
+ .list-group-item a.active {
+     border-left: 3px solid blue;
+ }
