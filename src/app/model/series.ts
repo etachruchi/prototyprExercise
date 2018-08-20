@@ -27,7 +27,7 @@ export interface opts {
       data: Array<number>;
     }>;
   chart: {
-      type:string,
+      type:string;
       renderTo:object;
   };
 }
