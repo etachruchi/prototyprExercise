@@ -1,0 +1,16 @@
+.container {
+    width: 80%;
+    float: right;
+}
+
+.container>p {
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.line {
+    width: 80%;
+    padding: 4px;
+    border-bottom: 1px solid #000000;
+    position: absolute;
+}
