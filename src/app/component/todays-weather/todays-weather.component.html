@@ -1,8 +1,91 @@
 <div class="container">
     <p>
-        todays-weather works!
+        Todays-Weather
     </p>
     <div class="line">
     </div>
+    <form class="form-horizontal" [formGroup]="weatherForm" (ngSubmit)="onSubmit(weatherForm.value)">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="city">City Name:</label>
+                    <div class="d-inline-block ml-2">
+                        <input type="text" class="form-control" placeholder="Enter city name" id="city" formControlName="city">
+                        <div *ngIf="weatherForm.controls['city'].errors && !weatherForm.controls['city'].pristine" class="alert alert-danger">
+                            <div *ngIf="weatherForm.controls['city'].errors.required">
+                                City Name is required.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="city">Country Name:</label>
+                    <div class="d-inline-block ml-2">
+                        <input type="text" class="form-control" placeholder="Enter country name" id="city" formControlName="country">
+                        <div *ngIf="weatherForm.controls['country'].errors && !weatherForm.controls['country'].pristine" class="alert alert-danger">
+                            <div *ngIf="weatherForm.controls['country'].errors.required">
+                                Country Name is required.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4 text-center">
+                <button class="btn btn-primary" [disabled]="!weatherForm.valid " type="submit">Forecast</button>
+            </div>
+            <div *ngIf="loading" class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="error">
+                <p *ngIf="errorMessage">{{errorMessage}}</p>
+            </div>
+        </div>
+
+    </form>
+    <div *ngIf="weatherData" class="col-lg-9">
+        <div class="col-lg-6 float-left ">
+            <div class="image float-left">
+                <img src={{iconUrl}}>
+            </div>
+            <div class="des float-right mt-5">
+                <h2> {{ weatherData.weather[0].main}}</h2>
+                <h3>{{ weatherData.weather[0].description}}</h3>
+            </div>
+        </div>
+        <div class="temwidth ">
+            <div class="temp">
+                <h4>Temperature:
+                    <span class="temprature"> {{ weatherData.main.temp_min}}°C ~ {{ weatherData.main.temp_max}}°C</span>
+                </h4>
+            </div>
+            <br>
+            <div class="humidity">
+                <h4>Humidity:
+                    <span class="temprature2"> {{ weatherData.main.humidity}}%</span>
+                </h4>
+            </div>
+        </div>
+
+
+
+    </div>
+
 </div>
 <app-home></app-home>

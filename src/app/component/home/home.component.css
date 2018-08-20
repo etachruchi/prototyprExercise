@@ -29,4 +29,5 @@
  
  .list-group-item a.active {
      border-left: 3px solid blue;
+     padding: 6px;
  }

@@ -57,11 +57,12 @@ export class DataAnalysisComponent implements OnInit, OnDestroy {
           data: [97512, 94796, 91818, 79673, 94684, 110633, 95993]
         }
       ],
-      chart:{
+      chart: {
         type: "line",
         renderTo: this.chartEl.nativeElement
       }
     };
+
     this.chart = new Highcharts.Chart(opts);
   }
 
